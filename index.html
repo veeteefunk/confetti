@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Confetti Falling Animation</title>
+</head>
+<body>
+
+    <section>
+        <h2>Requested Video</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et maxime autem eum quam explicabo animi, recusandae optio laborum! Mollitia odit error praesentium incidunt provident repellendus ipsum ducimus ullam, exercitationem accusamus inventore atque? Veniam cumque aut repudiandae earum, unde commodi, suscipit ad corporis eveniet maiores, adipisci inventore consequuntur quisquam temporibus deserunt impedit. Quibusdam magni repellendus quis laudantium veritatis debitis itaque in eos quod, reiciendis veniam ut similique, rerum perferendis amet nobis dolore labore eligendi aliquam laboriosam sequi. Ipsum, rerum. Alias, temporibus nobis facilis mollitia ad natus reiciendis cumque quod molestiae laudantium iste earum quos ex impedit voluptatem officiis eaque explicabo aspernatur dolore. Explicabo a nihil facilis rem, eligendi quam possimus consequatur voluptate deleniti? Officiis facilis repellat minus, possimus officia provident aliquam eius? Voluptates repellat quis earum, quaerat rerum eaque voluptatibus saepe, corporis perspiciatis, quos officia cupiditate repudiandae laboriosam velit consequatur? Ea delectus, sed modi quod consectetur, nihil beatae fugiat error nostrum eius iusto facere, fugit eos sit a aliquid illo tempora nulla culpa dolorem. Eaque nemo asperiores accusantium aut eius magni assumenda magnam numquam, in quas qui dolorem, temporibus, suscipit quia ipsum mollitia eligendi quis inventore voluptates reprehenderit. Labore quisquam repudiandae totam suscipit! Possimus pariatur, perferendis eaque ipsam quaerat illo consequuntur!</p>
+        <button class="btn" href="#">Click Here</button>
+
+        <div class="popup">
+            <h2>Your content goes here...</h2>
+            <b class="close">x</b>
+        </div>
+    </section>
+
+    <canvas id="my-canvas"></canvas>
+    
+    <script src="index.min.js"></script>
+    <script>
+        let btn = document.querySelector('.btn');
+let popup = document.querySelector('.popup');
+let close = document.querySelector('.close');
+let confe = document.querySelector('#my-canvas');
+
+btn.onclick = function(){
+    popup.classList.add('active');
+    confe.classList.add('active');
+}
+
+close.onclick = function(){
+    popup.classList.remove('active');
+    confe.classList.remove('active');
+}
+
+var confettiSettings = { target: 'my-canvas' };
+var confetti = new ConfettiGenerator(confettiSettings);
+confetti.render();
+    </script>
+</body>
+</html>
